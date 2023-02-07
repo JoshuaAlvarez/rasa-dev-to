@@ -2,29 +2,34 @@ version: "3.1"
 
 stories:
 
-- story: happy path
+- story: ruta feliz
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+    - intent: saludo
+    - action: utter_saludo
+    - intent: humor_excelente
+    - action: utter_humor_excelente
 
-- story: sad path 1
+- story: ruta triste
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+    - intent: saludo
+    - action: utter_saludo
+    - intent: humor_triste
+    - action: utter_humor_triste 
+    - action: utter_animar
+    - action: utter_fue_de_ayuda
+    - intent: afirmacion
+    - action: utter_humor_excelente
 
-- story: sad path 2
+- story: ruta triste 2
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+    - intent: saludo
+    - action: utter_saludo
+    - intent: humor_triste
+    - action: utter_humor_triste 
+    - action: utter_animar
+    - action: utter_fue_de_ayuda
+    - intent: negacion
+    - action: utter_humor_triste 
+    - action: utter_ayudar
+
+

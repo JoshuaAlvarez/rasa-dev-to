@@ -1,33 +1,77 @@
 version: "3.1"
 
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - saludo
+  - despedida
+  - afirmacion
+  - negacion
+  - humor_excelente
+  - humor_triste
+  - bot_desafio
+  - acerca_de_encodice
+  - navegacion
 
 responses:
-  utter_greet:
-  - text: "Hey! How are you?"
+  utter_saludo:
+    - text: "¡Hola! ¿Cómo estás?"
+    - text: "¿Qué tal? ¿Cómo te va?"
+    - text: "Hola, ¿cómo estás hoy?"
+    - text: "Bienvenido"
+    - text: "Bienvenido, me da gusto que estés aquí"
+    
+  utter_ayudar:
+    - text: "¿En qué puedo ayudarte?"
+    - text: "¿Cómo puedo ayudarte?"
+    - text: "¿Puedo ayudarte en algo?"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_despedida:
+    - text: "Adios"
+    - text: "Hasta luego"
+    - text: "Nos vemos"
 
-  utter_did_that_help:
-  - text: "Did that help you?"
+  utter_afirmacion:
+    - text: "De acuerdo"
+    - text: "Bien"
+    - text: "Excelente"
 
-  utter_happy:
-  - text: "Great, carry on!"
+  utter_negacion:
+    - text: "No"
 
-  utter_goodbye:
-  - text: "Bye"
+  utter_humor_excelente:
+    - text: "Excelente, continua así"
+    - text: "Grandioso :D"
+    - text: "Perfecto"
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  utter_humor_triste:
+    - text: "Lo siento, recuerda que puedes superar cualquier problema"
+    - text: "Lamento que te sientas así"
+    - text: "Lamento eso, te deseo lo mejor"
+
+  utter_animar:
+    - text: "Espero que esto pueda animarte https://bit.ly/3Hx7Fkb"
+    - text: "Quizás esto te hará sonreir"
+      image: "https://i.pinimg.com/originals/09/f3/47/09f34718e6a327e04a20b383b6d2da3d.jpg"
+
+  utter_fue_de_ayuda:
+    - text: "¿Te ayudó?"
+    - text: "¿Eso fue de ayuda?"
+    - text: "¿Te sientes mejor?"
+
+  utter_soy_un_bot:
+    - text: "Soy un chatbot creado por Encodice"
+    - text: "Soy un asistente virtual basado en texto"
+    - text: "Soy un chatbot creado para Encodice mediante la tecnología de Rasa"
+
+  utter_acerca_de_encodice:
+    - text: "Encodice es un sitio web de preguntas y respuestas, noticias de investigación e 
+            intercambio de conocimientos formado por varios subgrupos basados en temas específicos 
+            de diversos campos relacionados con la ingeniería."
+    - text: "El objetivo de Encodice es ayudar a expertos y estudiantes a compartir sus dudas y 
+            conocimientos. ¿Qué tema te gustaría buscar?"
+    - text: "..."    
+
+  utter_navegacion:
+    - text: "..."
 
 session_config:
   session_expiration_time: 60
